@@ -1,0 +1,21 @@
+# frontend
+frontend/job-portal/logs
+frontend/job-portal/*.log
+frontend/job-portal/npm-debug.log*
+frontend/job-portal/yarn-debug.log*
+frontend/job-portal/yarn-error.log*
+frontend/job-portal/pnpm-debug.log*
+frontend/job-portal/lerna-debug.log*
+frontend/job-portal/node_modules
+frontend/job-portal/dist
+frontend/job-portal/dist-ssr
+frontend/job-portal/*.local
+frontend/job-portal/.vscode/*
+!frontend/job-portal/.vscode/extensions.json
+frontend/job-portal/.idea
+frontend/job-portal/.DS_Store
+frontend/job-portal/*.suo
+frontend/job-portal/*.ntvs*
+frontend/job-portal/*.njsproj
+frontend/job-portal/*.sln
+frontend/job-portal/*.sw?
