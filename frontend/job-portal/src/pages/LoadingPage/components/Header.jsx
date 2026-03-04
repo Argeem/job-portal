@@ -1,6 +1,6 @@
-import React from "react";
 import { Briefcase } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const isAuthenticated = true;
@@ -8,11 +8,19 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-sm border-b border-gray-200 shadow-sm"
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* logo */}
-          <div className="flex items-center space-x-3">
+          <div
+            className="flex items-center space-x-3 cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Briefcase className="w-5 h-5 text-white" />
             </div>
@@ -32,10 +40,10 @@ const Header = () => {
                 navigate(
                   isAuthenticated && user?.role === "employer"
                     ? "/employer/dashboard"
-                    : "/login"
+                    : "/login",
                 )
               }
-              className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+              className="text-gray-600 hover:text-gray-900 transition-colors font-medium cursor-pointer"
             >
               For Employers
             </a>
@@ -76,7 +84,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
