@@ -11,6 +11,8 @@ import {
   Building2,
   LayoutDashboard,
   Plus,
+  Target,
+  TrendingUp,
 } from "lucide-react";
 
 export const jobSeekerFeatures = [
@@ -64,6 +66,37 @@ export const employerFeatures = [
     title: "Quick Hiring",
     description:
       "Streamline your hiring process with our efficient tools, allowing you to post jobs, review applications, and communicate with candidates all in one place.",
+  },
+];
+
+export const stateAnalytics = [
+  {
+    icon: Users,
+    title: "Active Users",
+    value: "2.4M+",
+    growth: "+15%",
+    color: "blue",
+  },
+  {
+    icon: Briefcase,
+    title: "Jobs Posted",
+    value: "150K+",
+    growth: "+22%",
+    color: "purple",
+  },
+  {
+    icon: Target,
+    title: "Success Rate",
+    value: "89K+",
+    growth: "+18%",
+    color: "green",
+  },
+  {
+    icon: TrendingUp,
+    title: "Match Rate",
+    value: "94%",
+    growth: "+8%",
+    color: "orange",
   },
 ];
 
