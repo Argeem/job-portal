@@ -1,3 +1,4 @@
+import Analytics from "./components/Analytics";
 import Features from "./components/Features";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -8,6 +9,7 @@ const LoadingPage = () => {
       <Header />
       <Hero />
       <Features />
+      <Analytics />
     </div>
   );
 };
