@@ -28,7 +28,7 @@ const App = () => {
           {/* Public Routes */}
           <Route path="/" element={<LoadingPage />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/signin" element={<Login />} />
+          <Route path="/login" element={<Login />} />
 
           <Route path="/find-jobs" element={<JobSeekerDashboard />} />
           <Route path="/job/:jobId" element={<JobDetail />} />
