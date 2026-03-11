@@ -19,3 +19,6 @@ frontend/job-portal/*.ntvs*
 frontend/job-portal/*.njsproj
 frontend/job-portal/*.sln
 frontend/job-portal/*.sw?
+
+# backend
+backend/node_modules
