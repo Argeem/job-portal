@@ -22,3 +22,4 @@ frontend/job-portal/*.sw?
 
 # backend
 backend/node_modules
+backend/.env
