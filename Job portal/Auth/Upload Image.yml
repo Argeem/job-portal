@@ -6,6 +6,13 @@ info:
 http:
   method: POST
   url: "{{localhost}}/api/auth/upload-image"
+  body:
+    type: multipart-form
+    data:
+      - name: image
+        type: file
+        value:
+          - C:\Users\sitth\Downloads\avatar1.jpg
   auth: inherit
 
 settings:

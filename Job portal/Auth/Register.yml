@@ -8,19 +8,14 @@ http:
   url: "{{localhost}}/api/auth/register"
   body:
     type: json
-    data: "{\r
-
-      \    \"username\":\"Alex\",\r
-
-      \    \"email\":\"alex@mail.com\",\r
-
-      \    \"password\": \"alex@123\",\r
-
-      \    \"avatar\": \"http://localhost:8000/upload/test-profile-01.png\",\r
-
-      \    \"role\": \"employer\"\r
-
-      }"
+    data: |-
+      {
+          "username":"Alex1",
+          "email":"alex1@mail.com",
+          "password": "alex1@123",
+          "avatar": "http://localhost:8000/uploads/1773668305963-avatar1.jpg",
+          "role": "employer"
+      }
   auth: inherit
 
 settings:

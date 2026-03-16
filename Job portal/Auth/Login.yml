@@ -5,8 +5,25 @@ info:
 
 http:
   method: POST
-  url: ""
+  url: "{{localhost}}/api/auth/login"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "alex1@mail.com",
+        "password": "alex1@123"
+      }
   auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const body = res.getBody()
+
+        if(body && body.token){
+          bru.setEnvVar("token", body.token)
+        }
 
 settings:
   encodeUrl: true
