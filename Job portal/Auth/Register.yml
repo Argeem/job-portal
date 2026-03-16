@@ -1,0 +1,30 @@
+info:
+  name: Register
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{localhost}}/api/auth/register"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"username\":\"Alex\",\r
+
+      \    \"email\":\"alex@mail.com\",\r
+
+      \    \"password\": \"alex@123\",\r
+
+      \    \"avatar\": \"http://localhost:8000/upload/test-profile-01.png\",\r
+
+      \    \"role\": \"employer\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
