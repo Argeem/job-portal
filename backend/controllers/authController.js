@@ -9,7 +9,7 @@ const generateToken = async (id) => {
 };
 
 // Register new user desc
-const register = async (req, res) => {
+exports.register = async (req, res) => {
   try {
     const { username, email, avatar, role, password } = req.body;
     const userExists = await User.findOne({ email });
@@ -43,7 +43,7 @@ const register = async (req, res) => {
 };
 
 // Login user desc
-const login = async (req, res) => {
+exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
@@ -69,13 +69,6 @@ const login = async (req, res) => {
 };
 
 // Get current user desc
-const getMe = async (req, res) => {
+exports.getMe = async (req, res) => {
   res.json(req.user);
-};
-
-module.exports = {
-  register,
-  login,
-  getMe,
-  generateToken,
 };
