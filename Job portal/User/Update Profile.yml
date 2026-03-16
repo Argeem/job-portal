@@ -1,0 +1,27 @@
+info:
+  name: Update Profile
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{localhost}}/api/user/profile"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "Alex Change",
+        "avatar": "http://localhost:8000/upload/test-profile-01.png",
+        "companyName": "Tech Corp",
+        "companyDescription": "Leading tech company",
+        "companyLogo": "https://example.com/logo.jpg"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -4,3 +4,5 @@ variables:
     value: http://localhost:8000
   - name: token
     value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjgwODAxMThhYjlmZDczZWM5MWIwNSIsImlhdCI6MTc3MzY2OTI1NywiZXhwIjoxNzc4ODUzMjU3fQ._m2FIsr5vYjxOyQoBaHy2RMbAE7PrpqROABl1V10cU
+  - name: user_id
+    value: ""

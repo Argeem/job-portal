@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "email": "alex1@mail.com",
-        "password": "alex1@123"
+        "email": "alex@mail.com",
+        "password": "alex@123"
       }
   auth: inherit
 
@@ -21,8 +21,13 @@ runtime:
       code: |-
         const body = res.getBody()
 
-        if(body && body.token){
-          bru.setEnvVar("token", body.token)
+        if(body){
+          if(body.token){
+            bru.setEnvVar("token", body.token)
+          }
+          if(body._id){
+            bru.setEnvVar("user_id", body._id)
+          }
         }
 
 settings:

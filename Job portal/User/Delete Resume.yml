@@ -1,0 +1,23 @@
+info:
+  name: Delete Resume
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{localhost}}/api/user/resume"
+  body:
+    type: json
+    data: |-
+      {
+        "resumeUrl": "http://localhost:3000/uploads/resume-filename.pdf"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
